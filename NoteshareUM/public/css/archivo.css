@@ -1,0 +1,214 @@
+:root {
+  --color-verde: #0D3B66;
+  --primary: var(--color-verde);
+  --primary-hover: #0a2f55;
+  --background: #f9f9f9;
+  --text-color: #333;
+  --card-radius: 18px;
+  --card-shadow: 0 2px 14px rgba(0,0,0,0.06);
+  --border: #ececec;
+  --badge-bg: #e6f2ff;
+  --badge-color: #003366;
+}
+
+body {
+  background: var(--background);
+  font-family: 'Inter', sans-serif;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.archivo-main {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+}
+
+h1#file-title {
+  margin-bottom: 1.2rem;
+  font-size: 2rem;
+}
+
+.archivo-content {
+  display: grid;
+  grid-template-columns: 2.3fr 1fr;
+  gap: 2.2rem;
+  margin-bottom: 2rem;
+}
+.archivo-preview-card,
+.archivo-info-card,
+.archivo-comments-card {
+  background: #fff;
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  padding: 2rem 2rem 1.2rem 2rem;
+}
+
+.archivo-preview-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.archivo-info-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  /* Quitar el borde azul */
+  /* border-left: 3px solid var(--color-verde); */
+  background: #fafcff;
+  min-width: 210px;
+}
+
+.archivo-info-card p {
+  margin: 0.15em 0;
+  font-size: 1.04rem;
+  line-height: 1.6;
+  color: #29516d;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.archivo-info-card .badge {
+  background: var(--badge-bg);
+  color: var(--badge-color);
+  border-radius: 8px;
+  padding: 0.15em 0.65em;
+  font-size: 0.94em;
+  margin-left: 0.4em;
+  font-weight: 500;
+}
+.archivo-info-card .badge.user { background: #d9f5d9; color: #216b36; }
+.archivo-info-card .badge.fecha { background: #f4e8e8; color: #6e2121; }
+
+.archivo-preview-card iframe,
+.archivo-preview-card img {
+  width: 100%;
+  height: 72vh;
+  max-height: 76vh;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+  background: #f8fafd;
+}
+
+.volver-btn-container {
+  display: flex;
+  justify-content: center;
+  margin: 1.4rem 0 0.1rem 0;
+}
+
+.btn-secondary {
+  background: var(--color-verde);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.55rem 1.2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: var(--card-shadow);
+}
+.btn-secondary:hover {
+  background: var(--primary-hover);
+}
+
+@media (max-width: 900px) {
+  .archivo-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .archivo-preview-card, .archivo-info-card {
+    padding: 1rem;
+  }
+  .volver-btn-container {
+    margin: 1rem 0 0.1rem 0;
+  }
+}
+
+.archivo-comments-card {
+  margin-top: 1.5rem;
+  padding: 2rem 1.5rem 1.2rem 1.5rem;
+}
+.archivo-comments-card h2 {
+  margin-top: 0;
+  color: var(--color-verde);
+}
+#comment-form {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+#comment-text {
+  min-height: 52px;
+  border-radius: 8px;
+  border: 1.5px solid var(--border);
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  resize: vertical;
+}
+.form-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.star-rating {
+  display: flex;
+  gap: 0.2em;
+}
+.star-rating span {
+  font-size: 1.6em;
+  color: #d0d0d0;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+/* Solo estrellas seleccionadas se ven doradas, no hay hover */
+.star-rating span.selected {
+  color: #ffc107;
+}
+#comment-form button {
+  align-self: flex-end;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.55rem 1.2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 0.7rem;
+  box-shadow: var(--card-shadow);
+  transition: background 0.2s;
+}
+#comment-form button:hover {
+  background: var(--primary-hover);
+}
+#comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.comment-card {
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.03);
+  border-left: 3px solid var(--color-verde);
+}
+.comment-card .meta {
+  font-size: 0.9em;
+  color: #6e8ba8;
+  margin-bottom: 0.2em;
+}
+.comment-card .rating {
+  color: #ffc107;
+  font-size: 1.18em;
+  margin-left: 0.4em;
+}
+.comment-card .text {
+  font-size: 1.03em;
+  color: #293142;
+}

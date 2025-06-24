@@ -1,0 +1,150 @@
+:root {
+  --color-verde: #0D3B66;
+  --color-rojo: #D72638;
+  --color-azul: #003366;
+  --color-dorado: #F4D35E;
+
+  --primary: var(--color-verde);
+  --primary-hover: #0a2f55;
+  --background: #f9f9f9;
+  --text-color: #333;
+  --font-family: 'Inter', sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+  background-color: #f9f9f9;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 0.2em;
+  color: var(--primary);
+}
+
+p.description {
+  max-width: 500px;
+  font-size: 1.1rem;
+  color: var(--text-color);
+  margin-bottom: 40px;
+}
+
+.login-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 250px;
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--primary);
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--primary-hover);
+}
+
+.logo {
+  width: 150px;
+  margin-bottom: 0.8em;
+}
+
+/* Sobre nosotros con fondo */
+.about-hero {
+  width: 100%;
+  min-height: 600px;
+  background-image: url('../img/fondo-estudio.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  color: white;
+  text-align: center;
+  margin-top: 60px;
+
+}
+
+.about-content {
+  max-width: 800px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.about-content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #f4d35e;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Footer en columnas */
+.legal-footer {
+  width: 100%;
+  background-color: #f1f1f1;
+  color: #333;
+  font-size: 0.85rem;
+  padding: 30px 15px;
+  margin-top: 40px;
+  border-top: 1px solid #ddd;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-section {
+  flex: 1 1 300px;
+  min-width: 250px;
+  max-width: 600px;
+  text-align: left;
+}
+
+.footer-section h2 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: var(--primary);
+}
+
+.footer-section p {
+  margin: 4px 0;
+  line-height: 1.4;
+}
+
+.footer-section a {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.footer-section a:hover {
+  text-decoration: none;
+}

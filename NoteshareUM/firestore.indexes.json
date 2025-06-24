@@ -1,0 +1,159 @@
+{
+"indexes": [
+{
+"collectionGroup": "documents",
+"queryScope": "COLLECTION",
+"fields": [
+{ "fieldPath": "career", "order": "ASCENDING" },
+{ "fieldPath": "views", "order": "DESCENDING" }
+]
+},
+{
+"collectionGroup": "documents",
+"queryScope": "COLLECTION",
+"fields": [
+{ "fieldPath": "career", "order": "ASCENDING" },
+{ "fieldPath": "timestamp", "order": "DESCENDING" }
+]
+},
+{
+"collectionGroup": "documents",
+"queryScope": "COLLECTION",
+"fields": [
+{ "fieldPath": "semester", "order": "ASCENDING" },
+{ "fieldPath": "views", "order": "DESCENDING" }
+]
+},
+{
+"collectionGroup": "documents",
+"queryScope": "COLLECTION",
+"fields": [
+{ "fieldPath": "semester", "order": "ASCENDING" },
+{ "fieldPath": "timestamp", "order": "DESCENDING" }
+]
+},
+{
+"collectionGroup": "documents",
+"queryScope": "COLLECTION",
+"fields": [
+{ "fieldPath": "subject", "order": "ASCENDING" },
+{ "fieldPath": "views", "order": "DESCENDING" }
+]
+},
+{
+"collectionGroup": "documents",
+"queryScope": "COLLECTION",
+"fields": [
+{ "fieldPath": "subject", "order": "ASCENDING" },
+{ "fieldPath": "timestamp", "order": "DESCENDING" }
+]
+},
+{
+"collectionGroup": "documents",
+"queryScope": "COLLECTION",
+"fields": [
+{ "fieldPath": "type", "order": "ASCENDING" },
+{ "fieldPath": "views", "order": "DESCENDING" }
+]
+},
+{
+"collectionGroup": "documents",
+"queryScope": "COLLECTION",
+"fields": [
+{ "fieldPath": "type", "order": "ASCENDING" },
+{ "fieldPath": "timestamp", "order": "DESCENDING" }
+]
+},
+{
+"collectionGroup": "documents",
+"queryScope": "COLLECTION",
+"fields": [
+{ "fieldPath": "career", "order": "ASCENDING" },
+{ "fieldPath": "semester", "order": "ASCENDING" },
+{ "fieldPath": "views", "order": "DESCENDING" }
+]
+},
+{
+"collectionGroup": "documents",
+"queryScope": "COLLECTION",
+"fields": [
+{ "fieldPath": "career", "order": "ASCENDING" },
+{ "fieldPath": "semester", "order": "ASCENDING" },
+{ "fieldPath": "timestamp", "order": "DESCENDING" }
+]
+},
+{
+"collectionGroup": "documents",
+"queryScope": "COLLECTION",
+"fields": [
+{ "fieldPath": "career", "order": "ASCENDING" },
+{ "fieldPath": "semester", "order": "ASCENDING" },
+{ "fieldPath": "subject", "order": "ASCENDING" },
+{ "fieldPath": "views", "order": "DESCENDING" }
+]
+},
+{
+"collectionGroup": "documents",
+"queryScope": "COLLECTION",
+"fields": [
+{ "fieldPath": "career", "order": "ASCENDING" },
+{ "fieldPath": "semester", "order": "ASCENDING" },
+{ "fieldPath": "subject", "order": "ASCENDING" },
+{ "fieldPath": "timestamp", "order": "DESCENDING" }
+]
+},
+{
+"collectionGroup": "documents",
+"queryScope": "COLLECTION",
+"fields": [
+{ "fieldPath": "career", "order": "ASCENDING" },
+{ "fieldPath": "type", "order": "ASCENDING" },
+{ "fieldPath": "views", "order": "DESCENDING" }
+]
+},
+{
+"collectionGroup": "documents",
+"queryScope": "COLLECTION",
+"fields": [
+{ "fieldPath": "career", "order": "ASCENDING" },
+{ "fieldPath": "type", "order": "ASCENDING" },
+{ "fieldPath": "timestamp", "order": "DESCENDING" }
+]
+},
+{
+"collectionGroup": "documents",
+"queryScope": "COLLECTION",
+"fields": [
+{ "fieldPath": "type", "order": "ASCENDING" },
+{ "fieldPath": "subject", "order": "ASCENDING" },
+{ "fieldPath": "views", "order": "DESCENDING" }
+]
+},
+{
+"collectionGroup": "documents",
+"queryScope": "COLLECTION",
+"fields": [
+{ "fieldPath": "type", "order": "ASCENDING" },
+{ "fieldPath": "subject", "order": "ASCENDING" },
+{ "fieldPath": "timestamp", "order": "DESCENDING" }
+]
+},
+{
+"collectionGroup": "documents",
+"queryScope": "COLLECTION",
+"fields": [
+{ "fieldPath": "userId", "order": "ASCENDING" },
+{ "fieldPath": "views", "order": "DESCENDING" }
+]
+},
+{
+"collectionGroup": "comments",
+"queryScope": "COLLECTION",
+"fields": [
+{ "fieldPath": "fileId", "order": "ASCENDING" },
+{ "fieldPath": "timestamp", "order": "DESCENDING" }
+]
+}
+],
+"fieldOverrides": []
+}

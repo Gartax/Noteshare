@@ -1,0 +1,170 @@
+:root {
+  --color-verde: #0D3B66;
+  --color-rojo: #D72638;
+  --color-azul: #003366;
+  --color-dorado: #F4D35E;
+
+  --primary: var(--color-verde);
+  --primary-hover: #0a2f55;
+  --background: #f9f9f9;
+  --text-color: #333;
+  --font-family: 'Inter', sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background);
+  font-family: var(--font-family);
+  color: var(--text-color);
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#main-content {
+  margin-top: 20px;
+}
+
+/* Estilos para los enlaces dentro de la lista de archivos */
+#file-list a {
+  color: #333; /* Color de texto agradable */
+  text-decoration: none; /* Eliminar subrayado */
+  font-weight: bold; /* Hacer el texto un poco más grueso */
+  font-size: 16px; /* Tamaño de fuente agradable */
+  transition: color 0.3s ease; /* Efecto de transición para el color */
+}
+
+#file-list a:hover {
+  color: #007BFF; /* Cambiar color al pasar el mouse */
+}
+
+/* Eliminar los puntos de la lista */
+#file-list {
+  list-style-type: none; /* Eliminar puntos de la lista */
+  padding-left: 0; /* Eliminar el margen izquierdo por defecto de las listas */
+}
+
+/* Estilos para la sección de archivos */
+#files-list {
+  font-family: Arial, sans-serif; /* Establecer una fuente más moderna */
+  color: #555; /* Color de texto más suave */
+  margin-top: 20px; /* Separación del contenido anterior */
+}
+
+/* Estilo para los elementos de la lista */
+#file-list li {
+  margin-bottom: 15px; /* Espaciado entre los elementos de la lista */
+}
+
+/* Estilo para la previsualización de la imagen */
+#file-list img {
+  margin-top: 5px;
+  max-width: 100px;
+  max-height: 100px;
+}
+
+/* Estilo para la previsualización de texto */
+#file-list p {
+  font-size: 14px;
+  color: #777;
+  margin-top: 5px;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+/* Otras reglas de estilo para tu aplicación */
+#toast-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10000;
+}
+
+.toast {
+  min-width: 200px;
+  max-width: 300px;
+  margin-top: 10px;
+  padding: 10px 15px;
+  color: #fff;
+  border-radius: 5px;
+  font-family: 'Inter', sans-serif;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInOut 4s ease-in-out forwards;
+}
+
+.toast.success { background: #4CAF50; }
+.toast.error { background: #F44336; }
+.toast.info { background: #2196F3; }
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(20px); }
+  10%,90% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(20px); }
+}
+#loader-overlay {
+  position: fixed;
+  top:0; left:0; right:0; bottom:0;
+  background:rgba(255,255,255,0.8);
+  display:flex; justify-content:center; align-items:center;
+  z-index:9999;
+}
+
+.loader {
+  border:6px solid #f3f3f3;
+  border-top:6px solid #0D3B66;
+  border-radius:50%;
+  width:40px; height:40px;
+  animation:spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
+.hidden {display:none;}
+
+.toast {
+  position:fixed; bottom:20px; right:20px; z-index:10000;
+  padding:10px; color:#fff; border-radius:5px;
+  opacity:0; transform:translateY(20px);
+  animation:fadeInOut 4s ease-in-out forwards;
+}
+
+.toast.success{background:#4CAF50;}
+.toast.error{background:#F44336;}
+
+@keyframes fadeInOut{
+  0%,100% {opacity:0; transform:translateY(20px);}
+  10%,90% {opacity:1; transform:translateY(0);}
+}
+.hidden-overlay {
+  display: none !important;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar archivo - NoteShare UM</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/upload.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+  <main class="upload-container">
+    <img src="logo.png" alt="Logo NoteShare UM" class="logo">
+    <h1>Editar archivo</h1>
+
+    <div class="form-group">
+      <label for="title">Título</label>
+      <input type="text" id="title" placeholder="Título del archivo">
+    </div>
+
+    <div class="form-group">
+      <label for="career">Carrera</label>
+      <select id="career"></select>
+    </div>
+
+    <div class="form-group">
+      <label for="semester">Semestre</label>
+      <select id="semester"></select>
+    </div>
+
+    <div class="form-group">
+      <label for="subject">Materia</label>
+      <select id="subject"></select>
+    </div>
+
+    <div class="form-group">
+      <label for="file-input">Reemplazar archivo (opcional)</label>
+      <div id="drop-area" class="drop-zone">
+        <p>Arrastra un archivo o haz clic para seleccionar</p>
+        <input type="file" id="file-input" hidden>
+      </div>
+      <span id="file-name">Archivo actual: <em id="current-file"></em></span>
+    </div>
+
+    <div class="form-group">
+      <label for="type">Tipo de documento</label>
+      <select id="type">
+        <option value="apunte">Apunte</option>
+        <option value="guia">Guía</option>
+        <option value="examen">Examen</option>
+        <option value="otro">Otro</option>
+      </select>
+    </div>
+
+    <div class="form-actions">
+      <button id="save-btn">💾 Guardar cambios</button>
+      <button id="cancel-btn">⬅️ Cancelar</button>
+    </div>
+  </main>
+
+  <div id="loader-overlay" class="hidden-overlay">
+    <div class="loader"></div>
+  </div>
+
+  <div id="toast-container"></div>
+
+  <script type="module" src="./js/ui.js"></script>
+  <script type="module" src="./js/editar_archivo.js"></script>
+</body>
+</html>

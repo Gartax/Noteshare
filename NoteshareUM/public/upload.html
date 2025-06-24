@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subir archivo - NoteShare UM</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/upload.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <main class="upload-container">
+    <img src="logo.png" alt="Logo NoteShare UM" class="logo">
+    <h1>Subir archivo</h1>
+
+    <form id="upload-form" autocomplete="off" novalidate>
+      <div class="form-group">
+        <label for="title">Título</label>
+        <input type="text" id="title" placeholder="Ej: Apunte de Álgebra" required maxlength="80" />
+      </div>
+
+      <div class="form-group">
+        <label for="career">Carrera</label>
+        <select id="career" required></select>
+      </div>
+
+      <div class="form-group">
+        <label for="semester">Semestre</label>
+        <select id="semester" required></select>
+      </div>
+
+      <div class="form-group">
+        <label for="subject">Materia</label>
+        <select id="subject" required></select>
+      </div>
+
+      <div class="form-group">
+        <label for="file-input">Archivo</label>
+        <div id="drop-area" class="drop-zone">
+          <p>Arrastra un archivo aquí o haz clic para subir</p>
+          <input type="file" id="file-input" hidden required accept=".pdf,.jpg,.jpeg,.png" />
+        </div>
+        <span id="file-name">Ningún archivo seleccionado</span>
+        <div id="file-preview" class="file-preview"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="type">Tipo de documento</label>
+        <select id="type" required>
+          <option value="apunte">Apunte</option>
+          <option value="guia">Guía</option>
+          <option value="examen">Examen</option>
+          <option value="otro">Otro</option>
+        </select>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" id="upload-btn">📤 Subir archivo</button>
+        <button type="button" id="back-btn">⬅️ Volver al menú</button>
+      </div>
+
+      <!-- Loader sutil debajo de los botones -->
+      <div id="loader-bar-container" class="loader-bar-container hidden">
+        <span class="loader-spinner"></span>
+        <div class="progress-bar-wrap">
+          <div id="progress-bar" class="progress-bar"></div>
+        </div>
+      </div>
+    </form>
+  </main>
+
+  <div id="toast-container"></div>
+
+  <script type="module" src="./js/ui.js"></script>
+  <script type="module" src="./js/upload.js"></script>
+</body>
+</html>

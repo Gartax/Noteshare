@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Archivo - NoteShare UM</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/archivo.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <main class="archivo-main">
+    <h1 id="file-title">Cargando...</h1>
+    
+    <div class="archivo-content">
+      <section class="archivo-preview-card">
+        <div id="file-preview"></div>
+        <div class="volver-btn-container">
+          <button class="btn-secondary" id="back-btn">⬅️ Volver</button>
+        </div>
+      </section>
+      <aside class="archivo-info-card" id="file-info"></aside>
+    </div>
+    
+    <section class="archivo-comments-card" id="comments-section">
+      <h2>Comentarios y calificaciones</h2>
+      <form id="comment-form">
+        <textarea id="comment-text" placeholder="Escribe tu comentario..." required></textarea>
+        <div class="form-group">
+          <label for="rating">Calificación:</label>
+          <div id="star-rating" class="star-rating">
+            <span data-value="1">★</span>
+            <span data-value="2">★</span>
+            <span data-value="3">★</span>
+            <span data-value="4">★</span>
+            <span data-value="5">★</span>
+          </div>
+        </div>
+        <button type="submit">Enviar comentario</button>
+      </form>
+      <div id="comments-list"></div>
+    </section>
+  </main>
+  <div id="toast-container"></div>
+  <script type="module" src="js/ui.js"></script>
+  <script type="module" src="js/comentarios.js"></script>
+  <script type="module" src="js/archivo.js"></script>
+</body>
+</html>

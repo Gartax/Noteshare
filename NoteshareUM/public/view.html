@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ver archivos - NoteShare UM</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/view.css" />
+  <link rel="stylesheet" href="css/toast.css" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <main class="view-main">
+    <div class="view-container">
+      <img src="logo.png" alt="Logo NoteShare UM" class="logo" />
+      <h1>Archivos disponibles</h1>
+      <!-- Filtros: inputs arriba -->
+      <div id="filters" class="filters-container">
+        <select id="filter-career"><option value="">Todas las carreras</option></select>
+        <select id="filter-semester"><option value="">Todos los semestres</option></select>
+        <select id="filter-subject"><option value="">Todas las asignaturas</option></select>
+        <select id="filter-type">
+          <option value="">Todos los tipos</option>
+          <option value="apunte">Apunte</option>
+          <option value="guia">Guía</option>
+          <option value="examen">Examen</option>
+          <option value="otro">Otro</option>
+        </select>
+        <input type="text" id="filter-title" placeholder="Buscar por título..." />
+      </div>
+      <!-- Botones abajo y separados -->
+      <div class="filters-buttons-row">
+        <button id="apply-filters" class="filters-btn filters-btn-primary">🔍 Filtrar</button>
+        <button id="clear-filters" class="filters-btn filters-btn-secondary">🔄 Borrar filtros</button>
+      </div>
+      <ul id="file-list" class="files-list-container"></ul>
+      <div id="loader-overlay" class="hidden-overlay">
+        <div class="loader"></div>
+      </div>
+      <p id="no-results" class="hidden">No se encontraron archivos con los criterios actuales.</p>
+      <p id="result-count"></p>
+      <div class="buttons-container">
+        <button id="load-more-btn" class="hidden">⬇️ Cargar más archivos</button>
+        <button id="back-btn">⬅️ Volver al menú</button>
+      </div>
+    </div>
+    <div id="toast-container"></div>
+  </main>
+  <script type="module" src="./js/ui.js"></script>
+  <script type="module" src="./js/view.js"></script>
+</body>
+</html>

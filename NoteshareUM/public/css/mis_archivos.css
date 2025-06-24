@@ -1,0 +1,280 @@
+:root {
+  --color-verde: #0D3B66;
+  --color-rojo: #D72638;
+  --color-azul: #003366;
+  --color-editar: #7CA7C7;
+
+  --primary: var(--color-verde);
+  --primary-hover: #0a2f55;
+  --background: #f9f9f9;
+  --text-color: #333;
+  --font-family: 'Inter', sans-serif;
+}
+
+/* Estructura general */
+body {
+  background-color: var(--background);
+  font-family: var(--font-family);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+.ma-main {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+/* Container principal */
+.ma-container {
+  width: 100%;
+  max-width: 1300px; /* más ancho para permitir más columnas */
+  margin: auto;
+  padding: 2.5rem 1.25rem;
+  text-align: center;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+}
+
+h1 {
+  font-size: 2.2rem;
+  color: var(--primary);
+  margin-bottom: 2rem;
+}
+
+/* Lista de archivos como grid tipo mosaico */
+.ma-files-list-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); /* Cambiado aquí */
+  gap: 2rem 1.5rem; /* espacio mayor para aire visual */
+  margin-bottom: 2rem;
+  padding: 0 0.625rem;
+  list-style: none;
+  justify-items: stretch;
+  align-items: stretch;
+}
+
+/* Tarjeta de archivo */
+.ma-files-list-container li {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 0.625rem;
+  padding: 1.25rem 0.5rem 1rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 18.75rem;
+  height: 100%;
+  box-sizing: border-box;
+  transition: transform 0.2s ease, box-shadow 0.2s;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.03);
+  /* width: minmax(15rem, 1fr);  <-- Eliminado, no es válido */
+}
+
+.ma-files-list-container li:hover,
+.ma-files-list-container li:focus-within {
+  transform: scale(1.03);
+  box-shadow: 0 4px 16px rgba(13,59,102,0.09);
+}
+
+.ma-files-list-container img {
+  height: 6.25rem;
+  width: 6.25rem;
+  object-fit: contain;
+  margin-bottom: 0.75rem;
+  display: block;
+  border-radius: 0.5rem;
+}
+
+.ma-files-list-container h4 {
+  font-size: 1rem;
+  margin: 0.5rem 0 0.3rem 0;
+  font-weight: 600;
+  color: var(--color-azul);
+}
+
+.ma-files-list-container p {
+  font-size: 0.94rem;
+  margin: 0.18rem 0;
+  color: #555;
+}
+
+.ma-empty-msg {
+  color: #999;
+  font-style: italic;
+  padding: 2rem;
+  grid-column: 1/-1;
+}
+
+/* Botones modulares */
+.ma-btn {
+  padding: 0.625rem 1.25rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.3s, outline 0.15s;
+  outline: none;
+  margin-top: 0.5rem;
+  width: 90%;
+}
+
+.ma-btn:focus, .ma-files-list-container button:focus, .ma-files-list-container a:focus {
+  outline: 2px solid var(--color-azul);
+  outline-offset: 2px;
+}
+
+.ma-btn-secondary {
+  background-color: var(--primary);
+  color: white;
+}
+.ma-btn-secondary:hover,
+.ma-btn-secondary:focus {
+  background-color: var(--primary-hover);
+}
+
+/* Botón editar */
+.ma-edit-btn {
+  background-color: var(--color-editar);
+  color: #fff;
+}
+.ma-edit-btn:hover, .ma-edit-btn:focus {
+  background-color: #5a84a3;
+}
+
+/* Botón eliminar */
+.ma-delete-btn {
+  background-color: var(--color-rojo);
+  color: #fff;
+}
+.ma-delete-btn:hover, .ma-delete-btn:focus {
+  background-color: #b91e2a;
+}
+
+/* Contenedor de botones */
+.ma-buttons-container {
+  margin-top: 2rem;
+}
+
+/* Loader reutilizable */
+.loader-bar-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+  width: 100%;
+  justify-content: center;
+  min-height: 30px;
+}
+.loader-spinner {
+  width: 22px;
+  height: 22px;
+  border: 3px solid #d1d5db;
+  border-top: 3px solid var(--primary, #2563eb);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  display: inline-block;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
+}
+.progress-bar-wrap {
+  flex: 1;
+  background: #f3f4f6;
+  border-radius: 6px;
+  overflow: hidden;
+  height: 13px;
+  display: flex;
+  align-items: center;
+}
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: var(--primary, #2563eb);
+  transition: width 0.3s;
+}
+.hidden {
+  display: none !important;
+}
+
+/* Responsive - cambia a 2 columnas en tablets, 1 en móvil */
+@media (max-width: 1024px) {
+  .ma-container {
+    padding: 1.25rem;
+    max-width: 98vw;
+  }
+  .ma-files-list-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.3rem;
+  }
+}
+@media (max-width: 700px) {
+  .ma-files-list-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .ma-files-list-container li {
+    padding: 0.8rem;
+    min-height: 13rem;
+  }
+  .ma-files-list-container img {
+    height: 4.5rem;
+    width: 4.5rem;
+  }
+  .ma-container {
+    padding: 0.6rem;
+  }
+  .ma-btn, .ma-btn-secondary {
+    width: 100%;
+  }
+}
+
+/* Materia: reserva 3 líneas */
+.ma-materia {
+  min-height: 3.9em;      /* 3 líneas aprox. */
+  max-height: 3.9em;
+  line-height: 1.3em;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  text-align: center;
+}
+
+/* Título: reserva 2 líneas */
+.ma-title {
+  min-height: 2.6em;
+  max-height: 2.6em;
+  line-height: 1.3em;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  width: 100%;
+  text-align: center;
+  word-break: break-word;
+}
+
+/* Centrar el loader respecto al container principal */
+.ma-main {
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Loader abajo y centrado, ancho similar al container */
+.loader-bar-container {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  max-width: 600px;     /* Ajusta esto según tu container */
+  width: 100%;
+}
+

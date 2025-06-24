@@ -1,0 +1,49 @@
+{
+    "informatica": {
+      "nombre": "Ingeniería en Informática",
+      "semestres": {
+        "1": ["Computación para Ingenieria", "Quimica Aplicada a la Ingenieria", "Algebra y Geometria Analitica","Calculo Diferencial","Administracion Moderna"],
+        "2": ["Programacion I", "Base de Datos", "Algebra Lineal","Cálculo Integral","Fisica"],
+        "3": ["Programacion II", "Taller de Base de Datos", "Ecuaciones Diferenciales","Cálculo Multivariable","Mecánica Clasica", "Micronomia"],
+        "4": ["Termodinámica Aplicada","Taller de Investigacion para Ingenieria","Estructura de Datos","Probabilidad y Estadisticas","Electricidad y Magnetismo"],
+        "5": ["Lenguaje de Programación","Arquitectura de Computadoras","Investigacion de Operaciones","Taller de Programación","Inferencia Estadisticas","Ingenieria Economica"],
+        "6": ["Matemáticas Discretas","Ingeniería de Software","Sistemas Operativos","Diseños de Interfaces","Metodos de Optimización","Contabilidad de Costos"],
+        "7": ["Inteligencia Artificial","Ingeniería de Requerimientos","Control Automático","Arquitectura de Desarrollo Web","Redes de Computadores","Marketing Industrial"],
+        "8": ["Modelamiento y Simulación","Ingeniería de Diseño","Seguridad de Información","Inteligencia de Negocios","Taller de Redes","Evaluacion Economica de Proyecto"],
+        "9": ["Proyecto de Ingenieria I", "Ingeniería QA","Normas de Seguridad","Computacion Distribuida","Gestion de Proyectos","Administracion Estrategica","Sustentabilidad y Medio Ambiente"],
+        "10": ["Proyecto de Ingenieria II","Gestion TI","Legislación Informática","Innovacion Tecnologica","Innovacion y Emprendimiento"],
+        "11": ["Proyecto Aplicado de Titulacion"]
+      }
+    },
+    "industrial": {
+      "nombre": "Ingeniería Civil Industrial",
+      "semestres": {
+        "1": ["Proyecto cornestone", "Pensamiento Computacional", "Introduccion a la administracion de proyectos", "Algebra","Quimica Aplicada a la Ingenieria"],
+        "2": ["Creatividad e innovación", "Programacíon aplicada en analisis de datos", "Estadistica","Cálculo","Fisica"],
+        "3": ["Modelos de negocios","Aplicaciones Computacionales en ingenieria","Inferencia","Cálculo Integral","Algebra Lineal"],
+        "4": ["Proyecto de innovacion tecnologico","Programacion aplicada en microcontroladores","Cálculo Multivariable","Mecanica"],
+        "5": ["Investigacion de Operaciones","Mecanica de fluidos","Resistencia y ciencia de los materiales","Analisis numerico","Electro-magnetismo","Microeconomia"],
+        "6": ["Investiacion de operaciones avanzadas","Sistemas termicos aplicados","Gestion de operaciones","Econometria","Macroeconomia"],
+        "7": ["Metodos de optimizacion","Transferencia de calor","Simulacion de procesos","Escritura cientifica y comunicacion en ingles","Gestion del talento humano"],
+        "8": ["Proyecto Capstone intermedio","Procesamiento y analisis de bases de datos","Contabilidad y control de gestion","Gestion estrategica"],
+        "9": ["Machine learning","Energias renovables y eficiencia energetica","Marketing estrategico","Ingenieria financiera","Juegos de negocios"],
+        "10": ["Proyecto de Ingenieria","Gestion de abastecimiento y procurement","Metodologias agiles para mejorar procesos","Evaluacion economica de proyectos","Emprendimiento tecnoogico","Gestion de proyectos"],
+        "11": ["Proyecto de titulo"]
+
+      }
+    },
+    "DataScience": {
+      "nombre": "Data Science",
+      "semestres": {
+        "1": ["Ciencia de Datos", "Algebra I", "Quimica General","Principio de Biologia","Teoria del conocimiento","Metodologia de investigacion","Competencia Academica"],
+        "2": ["Programacion I", "Algebra Lineal", "Quimica Organica","Ecologia y biodiversidad","Calculo I","Principio de Sociologia","Escritura y lectura academica"],
+        "3": ["Programacion II","Taller de Ciencia de Datos I", "Calculo II","Mecánica Clasica","Probabilidad y estadistica","Principio de Economia"],
+        "4": ["Programacion III","Taller de Ciencia de Datos II","Metodos Cuantitativos en investigacion","Ecuaciones Diferenciales","Electricidad y Magnetismo","Instituciones y Politicas Publica"],
+        "5": ["Base de Datos","Taller de Ciencia de Datos III","Metodos Cualitativos en Investigacion","Estadistica inferencial","Etica y responsabilidad","Fisica Moderna"],
+        "6": ["Mineria de Datos","Taller de Ciencia de Datos IV","Estaditica Multivariada","Teoria de Grafos y Redes","TExtmining y Procesamiento de lenguaje","Desarrollo del Pensamiento Creativo"],
+        "7": ["Visualizacion de Datos","Taller de Ciencia de Datos V","Modelamiento de Sistemas","Machine Learning","Gestion de Emprendimiento"],
+        "8": ["Seminario de Grado","Deep Learning","Profundizacion","Formulacion y Gestion de Proyectos"]
+      }
+    }
+  }
+  

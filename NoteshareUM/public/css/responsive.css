@@ -1,0 +1,102 @@
+@media (max-width: 768px) {
+    body {
+      padding: 20px;
+      text-align: center;
+    }
+    
+  
+    .logo {
+      width: 100px;
+      margin-bottom: 20px;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+    .description {
+      font-size: 1rem;
+      padding: 0 10px;
+    }
+  
+    .login-buttons {
+      width: 100%;
+    }
+  
+    button {
+      width: 100%;
+      font-size: 1.1rem;
+      padding: 14px 0;
+    }
+  }
+  @media (max-width: 768px) {
+    .menu-container {
+      padding: 20px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  
+    .logo {
+      width: 100px;
+      margin-bottom: 20px;
+    }
+  
+    h1#greeting {
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+    }
+  
+    .menu-buttons {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .menu-buttons button {
+      width: 100%;
+      padding: 14px 0;
+      font-size: 1.1rem;
+    }
+  }
+  @media (max-width: 768px) {
+    .upload-container {
+      padding: 20px;
+      margin: 0 auto;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  
+    .logo {
+      width: 100px;
+      margin-bottom: 20px;
+    }
+  
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+  
+    .form-group label {
+      font-size: 1rem;
+    }
+  
+    .form-group input,
+    .form-group select {
+      font-size: 1rem;
+      padding: 10px;
+      width: 100%;
+    }
+  
+    .form-actions {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .form-actions button {
+      width: 100%;
+      padding: 14px;
+      font-size: 1.1rem;
+    }
+  }
+  
