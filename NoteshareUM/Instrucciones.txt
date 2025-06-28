@@ -1,0 +1,55 @@
+
+NoteShare UM - Plataforma de intercambio académico
+==================================================
+
+DESCRIPCIÓN
+-----------
+NoteShare UM es una plataforma web para estudiantes de la Universidad Mayor. Permite subir, consultar y filtrar apuntes, guías y exámenes organizados por carrera, semestre y asignatura. Está desarrollada en HTML, CSS y JavaScript con Firebase como backend.
+
+ESTRUCTURA DEL REPOSITORIO
+---------------------------
+NoteShareUM/
+│
+├── .firebaserc
+├── firebase.json
+├── firestore.indexes.json
+├── cors.json
+├── service-worker.js
+├── .gitignore
+│
+└── public/
+    ├── index.html, menu.html, upload.html, view.html, etc.
+    ├── css/        → Estilos (styles.css, responsive.css, etc)
+    ├── js/         → Lógica de la app (config.js, ui.js, etc)
+    ├── img/        → Imágenes como fondo-estudio.jpg, logo.png
+    ├── manifest.json, favicon.png, 404.html, ads.txt
+
+CÓMO VER EL PROYECTO
+---------------------
+
+OPCIÓN 1 - Visual Studio Code + Live Server (RECOMENDADO)
+----------------------------------------------------------
+1. Abrir la carpeta del proyecto en Visual Studio Code
+2. Instalar la extensión "Live Server" si no la tienes
+3. Ir al archivo: public/index.html
+4. Click derecho > "Open with Live Server"
+5. Se abrirá en el navegador en http://localhost:5500/public/
+
+IMPORTANTE: No abrir directamente con doble clic, ya que Firebase usa módulos que solo funcionan desde un servidor.
+
+OPCIÓN 2 - Si ya está desplegado en Firebase
+--------------------------------------------
+Simplemente entra a la URL del proyecto, por ejemplo:
+https://noteshareum.web.app/
+
+FUNCIONALIDADES
+---------------
+- Login con Google o como invitado
+- Subida de archivos (título, tipo, carrera, semestre, asignatura)
+- Filtros múltiples para búsqueda avanzada
+- Comentarios y valoraciones
+- Visualización y descarga de archivos
+- Responsive para celular y escritorio
+- Instalación como App (PWA)
+
+¡Listo! Puedes navegar libremente y probar la plataforma.
